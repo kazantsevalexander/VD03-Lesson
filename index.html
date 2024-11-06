@@ -5,82 +5,226 @@
     <title>Пример сайта</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        .primary {
-            background-color: #6f42c1; /* Фиолетовый цвет */
-        }
         .nav-link {
             color: white;
         }
         .nav-link:hover {
-            color: black; /* Цвет при наведении */
+            color: green; /* Цвет при наведении */
+        }
+        .card-img-top {
+            height: 200px; /* Задайте нужную высоту для всех изображений */
+            object-fit: cover; /* Обрезка изображения, чтобы оно не растягивалось */
+        }
+        .carousel-item img {
+          height: 500px; /* или любую другую нужную вам высоту */
+          object-fit: cover;
+          object-position: center;
         }
     </style>
 </head>
 <body>
-    <header class="container-fluid bg-primary text-white">
-        <div class="container">
-            <div class="row align-items-center py-3">
-                <!-- Логотип -->
-                <div class="col-sm-0 col-md-2">
-                    <a href="https://zerocoder.ru/" class="navbar-brand text-white">
-                        <img src="logo.svg">
-                    </a>
-                </div>
-                <!-- Навигация -->
-                <nav class="col-sm-10 col-md-8">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Услуги</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Кнопки -->
-                <div class="col-1 text-end">
-                    <a href="#login" class="btn btn-outline-light me-2">Войти</a>
-                </div>
-            </div>
+    <header class="container-fluid bg-dark">
+        <div class="container d-flex align-items-center justify-content-between py-3">
+            <!-- Логотип -->
+            <a class="navbar-brand text-white d-flex align-items-center" href="https://zerocoder.ru/">
+                <img src="logo.png" alt="Logo" width="60" class="me-2">
+                peppers.by
+            </a>
+
+            <!-- Навигация -->
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Кнопка Войти -->
+            <a href="#login" class="btn btn-outline-light">Войти</a>
         </div>
     </header>
 
-    <div class="container">
-        <!-- Карточки -->
-        <div class="card mt-3">
-          <img src="sup.jpeg" class="card-img-top" alt="Soup">
-          <div class="card-body">
-            <h5 class="card-title">История супа</h5>
-            <p class="card-text">Предполагается, что первыми жидкое блюдо сварили синантропы,
-                которые триста тысяч лет назад научились пользоваться огнём для приготовления
-                пищи. Они жарили мясо, завернув в мягкую глину, которая затвердевала и в
-                конечном итоге и привела к изобретению горшка. В некоторых регионах Европы
-                (Испания, Франция, Великобритания) использование огня не прослеживается ранее
-                чем двести тысяч лет назад, поэтому время появления супа, как и конкретную культуру,
-                в которой он возник, определить невозможно. Час супа наступил, когда человек узнал,
-                что трудно перевариваемые или несъедобные растительные и животные субстанции
-                благодаря варке становятся съедобными и полезными.</p>
+
+    <!-- Секция 1 -->
+    <div class="container py-5">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-        </div>
-        <div class="card mt-3">
-          <div class="card-body">
-            <h5 class="card-title">История жареной картошки</h5>
-            <p class="card-text">Говорят, что картофель фри был изобретен в 18 веке в бельгийском
-                городе Динан. Люди, жившие у реки Маас, протекающей через Валлонию, ловили мелкую
-                рыбу и жарили ее во масле. Зимой, когда река замерзала, рыбы не было, поэтому бельгийцы
-                нарезали картошку в форме рыбы и жарили ее.</p>
-            <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="pasta.jpeg" class="d-block w-100" alt="pasta">
+            </div>
+            <div class="carousel-item">
+              <img src="potato.jpeg" class="d-block w-100" alt="potato">
+            </div>
+            <div class="carousel-item">
+              <img src="sup.jpeg" class="d-block w-100" alt="soup">
+            </div>
           </div>
-          <img src="potato.jpeg" class="card-img-bottom" alt="Potato">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+          </button>
         </div>
     </div>
 
+    <!-- Секция 2 -->
+    <div class="container-fluid col-xs-12 col-md-xxl-4 bg-dark text-white py-5 mt-3">
+        <div class="row justify-content-center g-3">
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card bg-secondary text-white" style="width: 22rem;">
+                    <img src="sup.jpeg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">История супа</h5>
+                        <p class="card-text">Предполагается, что первыми жидкое блюдо сварили синантропы,
+                            которые триста тысяч лет назад научились пользоваться огнём для приготовления
+                            пищи. Они жарили мясо, завернув в мягкую глину, которая затвердевала и в
+                            конечном итоге и привела к изобретению горшка.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card bg-secondary text-white" style="width: 22rem;">
+                    <img src="potato.jpeg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">История жареной картошки</h5>
+                        <p class="card-text">Говорят, что картофель фри был изобретен в 18 веке в бельгийском
+                            городе Динан. Люди, жившие у реки Маас, протекающей через Валлонию, ловили мелкую
+                            рыбу и жарили ее во масле. Зимой, когда река замерзала, рыбы не было, поэтому бельгийцы
+                            нарезали картошку в форме рыбы и жарили ее.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card bg-secondary text-white" style="width: 22rem;">
+                    <img src="pasta.jpeg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">История пасты</h5>
+                        <p class="card-text">История пасты насчитывает столетия и пропитана традициями,
+                            приправленными ароматом средиземноморской культуры. Считается, что секрет
+                            приготовления теста из муки и воды пришел в Италию из древнего Китая по
+                            шелковому пути. Итальянцы придали макаронам свой неповторимый характер,
+                            превратив их в национальное блюдо. Первые упоминания о пасте в Италии
+                            относятся к XIII веку.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция 3 -->
+    <div class="container mt-3">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                История супа
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>История супа</strong> уходит корнями в глубокую древность, когда люди только начали
+                  осваивать приготовление пищи на огне. Первые супы появились, вероятно, в каменном веке,
+                  когда наши предки научились кипятить воду, помещая раскаленные камни в сосуды с водой.
+                  Это позволило варить в них дичь, травы и коренья, создавая первые отварные блюда.
+                  Со временем, с развитием кулинарных навыков и появлением глиняной посуды, приготовление
+                  супа стало более удобным. Примечательно, что слово «суп» в европейские языки вошло позже.
+                  В Древнем Риме и Греции его называли "потаж", а китайцы, имея богатую традицию супов, считали,
+                  что правильный бульон – это ключ к здоровью и долголетию. Китайские лекари варили супы из
+                  целебных трав и кореньев, создавая рецепты, которые веками передавались по наследству.
+                  В Средневековой Европе суп был основным блюдом среди бедняков, так как позволял сытно
+                  накормить большую семью из простых и доступных ингредиентов. Богачи же предпочитали более
+                  изысканные версии – супы с мясом и специями. В XVII веке во Франции появился термин
+                  "похлебка" (с французского "суп"), и с тех пор французская кухня стала задавать тон в
+                  кулинарной суповой культуре, подарив миру множество рецептов, таких как луковый суп и биск.
+                  Сегодня суп – неотъемлемая часть национальных кухонь мира. Борщ на Украине, том ям в
+                  Таиланде, гаспачо в Испании, минестроне в Италии – каждый народ создавал и совершенствовал
+                  свои уникальные рецепты, обогащая мировую кулинарию. Супы не только утоляют голод, но и
+                  объединяют людей, сохраняя культуру и традиции, передающиеся из поколения в поколение.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                История жареной картошки
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Жареная картошка – </strong> одно из самых популярных блюд во всем мире, и её история
+                  уходит корнями в Южную Америку, откуда родом сам картофель. Первоначально картофель
+                  культивировали индейцы Перу и Боливии ещё несколько тысяч лет назад. В Европу он попал в XVI
+                  веке благодаря испанским завоевателям, и сначала его воспринимали как декоративное или
+                  лекарственное растение, но не как пищу. Однако вскоре люди начали готовить картофель, пробуя
+                  различные способы его приготовления, включая обжаривание. В XVII веке французские и
+                  бельгийские повара впервые начали обжаривать картофель в масле, и это стало настоящим
+                  открытием. Появление картошки фри приписывают именно бельгийцам, которые изначально
+                  обжаривали рыбу, но в зимнее время, когда рыбы не хватало, стали обжаривать тонкие
+                  ломтики картофеля. Постепенно идея жарить картофель распространилась по Европе, где
+                  блюдо полюбилось простым людям за свою сытность и доступность. В Россию картофель завезли
+                  в XVIII веке по указу Петра I, но распространение и признание он получил позже, при
+                  Екатерине II. Со временем жареный картофель стал одной из основ русской кухни. Приготовление
+                  его не требует особых навыков, а ингредиенты всегда под рукой, что сделало блюдо любимым
+                  в народе. В XX веке с появлением фастфуда жареный картофель, особенно в виде картофеля фри,
+                  стал символом быстрого питания и набрал популярность по всему миру. Разнообразие рецептов,
+                  от классического обжаривания ломтиков до добавления лука, грибов и специй, сделало жареную
+                  картошку универсальным гарниром и самостоятельным блюдом.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                История пасты
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>История пасты </strong>начинается ещё в древности, и её истоки до сих пор вызывают
+                  споры. Одни историки считают, что первые упоминания о пасте встречаются в Древнем Китае,
+                  где уже более 4000 лет назад готовили блюда из теста. Китайцы готовили лапшу из муки и воды,
+                  раскатывая и нарезая её длинными полосками. Именно это блюдо, как предполагается, попало в
+                  Италию благодаря легендарному путешественнику Марко Поло в XIII веке. Однако существуют
+                  доказательства, что пасту знали на Апеннинском полуострове задолго до его путешествий.
+                  Древние римляне и этруски готовили нечто подобное, запекая тесто из зерновой муки и воды.
+                  Археологические находки подтверждают, что в Сицилии паста существовала уже в VIII веке
+                  благодаря арабам, которые принесли в Европу традицию изготовления сухих макарон.
+                  Средневековая Италия стала местом, где паста приобрела свою популярность. Её удобство
+                  в хранении и простота приготовления сделали её важной частью итальянского рациона.
+                  В XV-XVI веках пасту начали варить, что стало революцией в кулинарии. С появлением томатов
+                  в Европе паста обрела своё фирменное сочетание – паста с томатным соусом. Этот простой и
+                  вкусный рецепт стремительно завоевал сердца людей, особенно на юге Италии. В XVII веке
+                  Неаполь стал центром производства макарон, где изобретательные итальянцы начали
+                  совершенствовать рецепты, добавляя сыр, зелень и специи. Со временем паста стала
+                  настоящим символом итальянской кухни. В XX веке, с массовой эмиграцией итальянцев,
+                  паста распространилась по всему миру, и в каждой стране она приобрела свои уникальные
+                  рецепты. Сегодня паста является одним из самых популярных блюд в мире, и её многообразие
+                  впечатляет – от спагетти и феттуччине до пенне и лазаньи. Итальянская традиция уважения к
+                  пасте как к искусству передаётся из поколения в поколение, а её рецепты продолжают
+                  вдохновлять кулинаров и любителей по всему миру.
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <!-- Подвал -->
     <footer id="contact" class="container-fluid bg-dark text-white py-5 mt-3">
@@ -108,16 +252,16 @@
                 <!-- Социальные сети -->
                 <div class="col-md-4 mb-3">
                     <h5>Мы в соцсетях</h5>
-                    <a href="https://facebook.com" class="text-white me-3">
+                    <a href="https://facebook.com" class="text-black me-3">
                         <img src="facebook-icon.svg" alt="Facebook" width="24" height="24">
                     </a>
-                    <a href="https://instagram.com" class="text-white me-3">
+                    <a href="https://instagram.com" class="text-black me-3">
                         <img src="instagram-icon.svg" alt="Instagram" width="24" height="24">
                     </a>
-                    <a href="https://twitter.com" class="text-white me-3">
+                    <a href="https://twitter.com" class="text-black me-3">
                         <img src="twitter-icon.svg" alt="Twitter" width="24" height="24">
                     </a>
-                    <a href="https://linkedin.com" class="text-white">
+                    <a href="https://linkedin.com" class="text-black">
                         <img src="linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
                     </a>
                 </div>
